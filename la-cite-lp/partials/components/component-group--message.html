@@ -1,0 +1,18 @@
+<div class="component-group--message">
+
+  {{#if page.examples}}
+    {{{create-example-sass "message" all true "components"}}}
+  {{/if}}
+  <ul components-list>
+    {{#each options.grunt.userConfig.components.message}}
+      <li>
+        {{{component "message" this "components"}}}
+
+        {{#if ../page.examples}}
+          {{{create-example-html "message" ../this "components"}}}
+          {{{create-example-sass "message" ../this false "components"}}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
