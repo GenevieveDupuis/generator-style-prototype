@@ -25,7 +25,7 @@ prototype:
     # Typekit Kit ID (uses advanced loading method)
     typekit: false
     # Copy in the the families from inside the brackets [] from the JavaScript tab. Be sure to wrap it in "double quotes". e.g.: "'Open+Sans::latin'"
-    googleFonts: false
+    googleFonts: "'Exo+2:200:latin', 'Oswald::latin'"
 
 ## Main Navigation Sections
 sections:
@@ -43,17 +43,15 @@ styleTile:
   # Source links to inspirational images
   # Either relative paths from your images directory, or absolute paths to external images
   images:
-    - patterns/moon.jpg
-    - patterns/ice.jpg
-    - patterns/iceberg.jpg
-    - patterns/clouds.jpg
-    - http://lorempixel.com/output/abstract-q-c-640-480-1.jpg
+    - patterns/design-element-1.png
+    - patterns/design-element-2.png
+    - patterns/design-element-3.png
   # Descriptive keywords for Style Tile
   keywords:
-    - Default
-    - Minimal
-    - Nothing
-    - Design me!
+    - Content focused
+    - Vibrant
+    - Modern
+    - Fun
 
 #########################
 ## Component Guide
