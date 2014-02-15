@@ -71,10 +71,6 @@ components:
     - Plus Button:
         classes:
           - plus-button
-    - Warning Button:
-        classes:
-          - big-button
-          - warning
 
 #########################
 ## Layout Guide
