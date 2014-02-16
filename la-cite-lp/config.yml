@@ -32,7 +32,7 @@ sections:
   Style Tile: style-tile
   Elements: elements
   Components: components
-  Layouts: layouts
+  ##Layouts: layouts
   Colors: colors
   Content Strategy: content
 
@@ -46,12 +46,13 @@ styleTile:
     - patterns/design-element-1.png
     - patterns/design-element-2.png
     - patterns/design-element-3.png
+    - patterns/design-element-4.png
   # Descriptive keywords for Style Tile
   keywords:
-    - Content focused
+    - Clean
     - Vibrant
     - Modern
-    - Fun
+    - Professional
 
 #########################
 ## Component Guide
@@ -62,9 +63,9 @@ components:
     - warning
     - error
   button:
-    - Call to Action:
-        classes:
-          - call-to-action
+    ##- Call to Action:
+    ##    classes:
+    ##      - call-to-action
     - Big Button:
         classes:
           - big-button
@@ -100,7 +101,7 @@ colors:
 
 #########################
 ## Server Options
-#########################
+######################### 
 server:
   port: 8000
   # If remoteAccess is set to true, you will be able to access your prototype from any device connected to the same network as well as be able to remotely debug them.
@@ -110,7 +111,7 @@ server:
 ## Export Options
 #########################
 export:
-  path: export
+  path: lacite
 
 #########################
 ## Compass Options
@@ -128,7 +129,7 @@ compass:
 #########################
 bump:
   # Commit your files to Git after your bump
-  commit: false
+  commit: true
   # What files to commit. -a for all files
   files:
     - -a

@@ -58,7 +58,7 @@ module.exports = function (grunt) {
   grunt.userConfig.clientCamelCase = _s.camelize(grunt.userConfig.clientSlug);
   grunt.userConfig.clientCamelCase = grunt.userConfig.clientCamelCase.charAt(0).toUpperCase() + grunt.userConfig.clientCamelCase.slice(1);
 
-  // Asset Paths
+  // Asset Paths 
   var imagesDir = userConfig.assets.imagesDir;
   var cssDir = userConfig.assets.cssDir;
   var sassDir = userConfig.assets.sassDir;
@@ -607,7 +607,9 @@ module.exports = function (grunt) {
 
     grunt.task.run(['parallel:assets', 'compass:dist', 'jshint']);
 
-    var baseURL = '/';
+    //Ca c'est pour le index.html qui call le styletiles.html
+    //var baseURL = '/';
+    var baseURL = '';
 
     if (grunt.file.exists('.git/config')) {
       var git = iniparser.parseSync('.git/config') || false;
@@ -620,8 +622,10 @@ module.exports = function (grunt) {
       }
     }
 
-    var redirect = "<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\" /><meta name=\"robots\" content=\"noindex\"><meta http-equiv=\"refresh\" content=\"0;URL='" + baseURL + first + "'\"><title>" + userConfig.client.name + " Style Prototype</title></head><body></body></html>";
+    var redirect = "<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\" /><meta name=\"robots\" content=\"noindex\"><meta http-equiv=\"refresh\" content=\"0;URL='" + baseURL + first + "/index.html'\"><title>" + userConfig.client.name + " Style Prototype</title></head><body></body></html>";
 
+                         
+    
     grunt.file.write('./.dist/index.html', redirect);
 
     if (commit) {
